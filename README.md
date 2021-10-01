@@ -22,6 +22,8 @@ This project is meant to be implemented using the [TypeLevel stack](https://type
 
 ## Design principles
 
+See [DOCS](/DOCS.md)
+
 ## Code of conduct
 
 See the [Code of Conduct](/CODE_OF_CONDUCT.md)
