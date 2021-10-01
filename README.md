@@ -1,9 +1,12 @@
 # Cats HTTP4S Doobie TODO
 
 A sample microservice written in Scala using Cats, HTTP4S, Doobie that implements an application to compute Crypto/Fiat
-currency conversion rates. This project is
-also based upon the work that has been done in [Scala Pet Store](https://github.com/pauljamescleary/scala-pet-store)
-and [todo-http4s-doobie](https://github.com/jaspervz/todo-http4s-doobie/tree/master/src/main/scala) projects.
+currency conversion rates. 
+
+This project is based upon the work that has been done in:
+
+* [Scala Pet Store](https://github.com/pauljamescleary/scala-pet-store)
+* [todo-http4s-doobie](https://github.com/jaspervz/todo-http4s-doobie/tree/master/src/main/scala)
 
 ## Project stack
 
@@ -17,6 +20,12 @@ This project is meant to be implemented using the [TypeLevel stack](https://type
 * [FS2 gRPC]()
 * Tagless Final wherever possible
 
-This project has developed over-time and has embraced some traditional OO concepts, in addition to modern FP concepts
-and libraries. Let's talk about the foundational design patterns that emerge in the pet store.
+## Design principles
 
+## Code of conduct
+
+See the [Code of Conduct](/CODE_OF_CONDUCT.md)
+
+## License
+
+This project is released under MIT license. See [LICENSE](/LICENSE.md)
