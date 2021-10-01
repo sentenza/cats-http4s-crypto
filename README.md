@@ -1,6 +1,7 @@
 # Cats HTTP4S Doobie TODO
 
 <a href="https://typelevel.org/cats/"><img src="https://raw.githubusercontent.com/typelevel/cats/c23130d2c2e4a320ba4cde9a7c7895c6f217d305/docs/src/main/resources/microsite/img/cats-badge.svg" height="40px" align="right" alt="Cats friendly" /></a>
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sentenza/cats-http4s-crypto/Scala%20CI)](https://github.com/sentenza/cats-http4s-crypto/actions?query=workflow%3A%22Scala+CI%22)
 
 A sample microservice written in Scala using Cats, HTTP4S, Doobie that implements an application to compute Crypto/Fiat
 currency conversion rates. 
