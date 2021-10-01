@@ -32,7 +32,7 @@ class MainApiRoutesSpec extends wordspec.AnyWordSpec with Matchers {
         val request: Request[IO]   = Request[IO](Method.GET, uri"/api/ping/me")
         val response: Response[IO] = callRoute(request).unsafeRunSync()
         response.status shouldBe Ok
-        response.as[PongResponse].unsafeRunSync() shouldBe PongResponse("Hello, me")
+        response.as[PongResponse].unsafeRunSync() shouldBe PongResponse("PONG > me")
       }
     }
   }

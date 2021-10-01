@@ -11,5 +11,5 @@ trait PingService[F[_]] {
 object PingService {
   implicit def apply[F[_]](implicit ev: PingService[F]): PingService[F] = ev
 
-  def impl[F[_]: Applicative]: PingService[F] = (n: Name) => Pong("Hello, " + n.name).pure[F]
+  def impl[F[_]: Applicative]: PingService[F] = (n: Name) => Pong("PONG > " + n.name).pure[F]
 }
