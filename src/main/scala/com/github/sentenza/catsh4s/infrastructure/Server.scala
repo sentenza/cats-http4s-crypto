@@ -1,13 +1,12 @@
 package com.github.sentenza.catsh4s.infrastructure
 
 import cats.effect.{Async, Resource}
-import com.comcast.ip4s.{Ipv4Address, Port}
-import com.github.sentenza.catsh4s.config.AppConfig
-import com.github.sentenza.catsh4s.infrastructure.endpoint.CatsH4sRoutes
-import com.github.sentenza.catsh4s.infrastructure.service.HelloWorldService
-import fs2.Stream
-import cats.syntax.all._
+import cats.implicits.catsSyntaxFlatMapOps
 import com.comcast.ip4s._
+import com.github.sentenza.catsh4s.config.AppConfig
+import com.github.sentenza.catsh4s.infrastructure.routes.{HealthRoutes, MainApiRoutes}
+import com.github.sentenza.catsh4s.infrastructure.service.PingService
+import fs2.Stream
 import org.http4s.HttpApp
 import org.http4s.ember.server.EmberServerBuilder
 import org.http4s.server.middleware.Logger
@@ -15,11 +14,14 @@ import org.http4s.server.middleware.Logger
 object Server {
 
   def stream[F[_]: Async]: Stream[F, Nothing] = {
+    import cats.syntax.semigroupk._
     for {
       generalConfig <- Stream.resource(AppConfig.load())
-      helloWorldService = HelloWorldService.impl[F]
-
-      httpApp = CatsH4sRoutes.helloWorldRoutes[F](helloWorldService).orNotFound
+      helloWorldService = PingService.impl[F]
+      mainApiRoutes     = MainApiRoutes.essentialRoutes[F](helloWorldService)
+      healthRoutes      = HealthRoutes.healthRoutes[F]
+      combinedRoutes    = mainApiRoutes <+> healthRoutes
+      httpApp           = combinedRoutes.orNotFound
 
       // With Middlewares in place
       finalHttpApp: HttpApp[F] = Logger.httpApp(logHeaders = true, logBody = true)(httpApp)
