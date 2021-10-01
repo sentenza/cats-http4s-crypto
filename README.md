@@ -32,4 +32,4 @@ See the [Code of Conduct](/CODE_OF_CONDUCT.md)
 
 ## License
 
-This project is released under MIT license. See [LICENSE](/LICENSE.md)
+This project is released under the MIT license. See [LICENSE](/LICENSE.md).
