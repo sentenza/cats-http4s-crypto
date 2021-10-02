@@ -14,5 +14,5 @@ addSbtPlugin("net.vonbuchholtz"  % "sbt-dependency-check"  % "3.0.0")
 addSbtPlugin("org.scoverage"             % "sbt-scoverage" % "1.9.0")
 
 addSbtPlugin("com.eed3si9n"              % "sbt-assembly"  % "0.14.10")
-addSbtPlugin("com.timushev.sbt"          % "sbt-updates"   % "0.5.3")
+addSbtPlugin("com.timushev.sbt"          % "sbt-updates"   % "0.6.0")
 
