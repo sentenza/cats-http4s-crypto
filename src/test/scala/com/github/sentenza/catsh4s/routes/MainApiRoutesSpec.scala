@@ -1,4 +1,4 @@
-package com.github.sentenza.catsh4s
+package com.github.sentenza.catsh4s.routes
 
 import cats.effect.IO
 import cats.effect.unsafe.implicits.global

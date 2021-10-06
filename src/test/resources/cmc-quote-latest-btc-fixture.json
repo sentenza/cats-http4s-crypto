@@ -1,0 +1,54 @@
+{
+  "status": {
+    "timestamp": "2021-10-06T21:11:59.378Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 4,
+    "credit_count": 1,
+    "notice": null
+  },
+  "data": {
+    "BTC": {
+      "id": 6436,
+      "name": "trqitjygo",
+      "symbol": "BTC",
+      "slug": "6yfq9is0s9r",
+      "is_active": 2105,
+      "is_fiat": null,
+      "circulating_supply": 7384,
+      "total_supply": 6561,
+      "max_supply": 3679,
+      "date_added": "2021-10-06T21:11:59.378Z",
+      "num_market_pairs": 6623,
+      "cmc_rank": 4304,
+      "last_updated": "2021-10-06T21:11:59.378Z",
+      "tags": [
+        "p4lhd6k8lt",
+        "fqogo6ksbmb",
+        "5bbo9ar40le",
+        "v62joim3zhs",
+        "dcv40ttlzlc",
+        "hk1fvc44uzq",
+        "6zbdrriok3u",
+        "x85ez11i2z",
+        "5uvsn7op8gm",
+        "e246qfpckqg"
+      ],
+      "platform": null,
+      "quote": {
+        "USD": {
+          "price": 0.614784817786999,
+          "volume_24h": 0.17984244999010568,
+          "percent_change_1h": 0.059280960016613315,
+          "percent_change_24h": 0.8638668041701414,
+          "percent_change_7d": 0.014175870299766746,
+          "percent_change_30d": 0.9861722155237611,
+          "market_cap": 0.8955178959473307,
+          "market_cap_dominance": 6117,
+          "fully_diluted_market_cap": 0.25467231539759516,
+          "last_updated": "2021-10-06T21:11:59.378Z"
+        }
+      }
+    }
+  }
+}

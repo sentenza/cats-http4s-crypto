@@ -5,7 +5,7 @@
 [![Scala Steward badge](https://img.shields.io/badge/Scala_Steward-helping-blue.svg?style=flat&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAMAAAARSr4IAAAAVFBMVEUAAACHjojlOy5NWlrKzcYRKjGFjIbp293YycuLa3pYY2LSqql4f3pCUFTgSjNodYRmcXUsPD/NTTbjRS+2jomhgnzNc223cGvZS0HaSD0XLjbaSjElhIr+AAAAAXRSTlMAQObYZgAAAHlJREFUCNdNyosOwyAIhWHAQS1Vt7a77/3fcxxdmv0xwmckutAR1nkm4ggbyEcg/wWmlGLDAA3oL50xi6fk5ffZ3E2E3QfZDCcCN2YtbEWZt+Drc6u6rlqv7Uk0LdKqqr5rk2UCRXOk0vmQKGfc94nOJyQjouF9H/wCc9gECEYfONoAAAAASUVORK5CYII=)](https://scala-steward.org)
 
 A sample microservice written in Scala using Cats, HTTP4S, Doobie that implements an application to compute Crypto/Fiat
-currency conversion rates. 
+currency conversion rates.
 
 This project is based upon the work that has been done in:
 
@@ -24,6 +24,19 @@ This project is meant to be implemented using the [TypeLevel stack](https://type
 * [FS2 gRPC]()
 * Tagless Final wherever possible
 
+## How to run the project
+
+Please read the
+[CoinMarketCap API documentation](https://coinmarketcap.com/api/documentation/v1/#section/Quick-Start-Guide)
+to understand how to consume their API. You can either define in application.conf your CoinMarketCap API KEY or set it
+as an environment variable. For Linux systems you can simply export it:
+
+```bash
+export CMC_API_KEY="<YOUR-KEY-HERE>"
+```
+
+or you can even pass it to the binary (JAR) as a TypeLevel config (Java) parameter as `-Dcmc.apikey="<YOUR-KEY-HERE>"`
+
 ## Design principles
 
 See [DOCS](/DOCS.md)
@@ -34,4 +47,4 @@ See the [Code of Conduct](/CODE_OF_CONDUCT.md)
 
 ## License
 
-This project is released under the MIT license. See [LICENSE](/LICENSE.md).
+This project is released under the MIT license. See [LICENSE](/LICENSE).
