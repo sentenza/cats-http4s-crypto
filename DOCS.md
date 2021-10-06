@@ -15,7 +15,7 @@ a `Company` and its `Employee`.
 
 ### Onion (or Hexagonal) Architecture
 
-In concert with DDD, the [Onion Architecture](https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/)
+In concert with DDD, the [Onion Architecture](https://herbertograca.com/2017/09/21/onion-architecture/)
 and [Hexagonal Architecture from Cockburn](https://java-design-patterns.com/patterns/hexagonal/) give us patterns on how
 to separate our domain from the ugliness of implementation.
 
