@@ -1,5 +1,5 @@
 val PureConfigVersion = "0.17.0"
-val Http4sVersion     = "0.23.4"
+val Http4sVersion     = "0.23.5"
 val CirceVersion      = "0.14.1"
 val EnumeratumVersion = "1.7.0"
 val LogbackVersion    = "1.2.6"
