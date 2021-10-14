@@ -22,6 +22,12 @@ object Database {
     )
   }
 
+  def init[F[_]](transactor: HikariTransactor[F])(implicit S: Sync[F]): F[Unit] =
+    transactor.configure { dataSource =>
+      val fw: Flyway = Flyway.configure().dataSource(dataSource).load()
+      S.delay(fw.migrate()).as(())
+    }
+
   /** Runs the flyway migrations against the target database
     */
   def initializeDb[F[_]](cfg: DatabaseConfig)(implicit S: Sync[F]): F[Unit] =
