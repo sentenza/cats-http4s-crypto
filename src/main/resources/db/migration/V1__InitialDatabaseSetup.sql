@@ -1,4 +1,5 @@
-CREATE TABLE crypto (
-  id SERIAL PRIMARY KEY,
-  description TEXT
+CREATE TABLE IF NOT EXISTS crypto_currencies (
+  symbol VARCHAR PRIMARY KEY,
+  name VARCHAR,
+  slug VARCHAR
 );

@@ -3,7 +3,7 @@ package com.github.sentenza.catsh4s.infrastructure.service
 import cats.effect.Concurrent
 import cats.implicits.catsSyntaxMonadError
 import com.github.sentenza.catsh4s.config.CmcConfig
-import com.github.sentenza.catsh4s.domain.CryptoCurrency
+import com.github.sentenza.catsh4s.domain.crypto.CryptoCurrency
 import com.github.sentenza.catsh4s.infrastructure.json.cryptoCurrencyDecoder
 import org.http4s.Method.GET
 import org.http4s.circe.jsonOf

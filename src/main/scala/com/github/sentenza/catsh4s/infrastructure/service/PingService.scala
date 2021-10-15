@@ -2,7 +2,7 @@ package com.github.sentenza.catsh4s.infrastructure.service
 
 import cats.Applicative
 import cats.implicits._
-import com.github.sentenza.catsh4s.domain.Pong
+import com.github.sentenza.catsh4s.domain.generic.Pong
 
 trait PingService[F[_]] {
   def pong(n: String): F[Pong]
