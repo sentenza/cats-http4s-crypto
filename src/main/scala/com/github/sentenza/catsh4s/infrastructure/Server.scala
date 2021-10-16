@@ -15,7 +15,7 @@ import org.http4s.server.middleware.Logger
 object Server {
 
   def run[F[_]: Async]: F[Nothing] = {
-    import cats.syntax.semigroupk._
+    import cats.syntax.semigroupk._ // to be able to combine routes
     (for {
       client        <- EmberClientBuilder.default[F].build
       generalConfig <- AppConfig.load()
@@ -30,7 +30,7 @@ object Server {
       combinedRoutes = mainApiRoutes <+> healthRoutes <+> cmcRoutes
       httpApp        = combinedRoutes.orNotFound
 
-      // Middlewares
+      // Logger Middleware
       finalHttpApp: HttpApp[F] = Logger.httpApp(logHeaders = true, logBody = true)(httpApp)
 
       _ <-

@@ -3,3 +3,6 @@ CREATE TABLE IF NOT EXISTS crypto_currencies (
   name VARCHAR,
   slug VARCHAR
 );
+
+INSERT INTO crypto_currencies (symbol, name, slug)
+VALUES ('BTC', 'Bitcoin', 'bitcoin');

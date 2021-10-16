@@ -1,4 +1,4 @@
-package com.github.sentenza.catsh4s.repository.doobie
+package com.github.sentenza.catsh4s.infrastructure.repository.doobie
 
 import cats.effect.Async
 import com.github.sentenza.catsh4s.domain.crypto.{CryptoCurrency, CryptoCurrencyRepositoryAlgebra}
@@ -7,11 +7,10 @@ import doobie.util.query.Query0
 import doobie.util.transactor.Transactor
 
 object CryptoCurrencySQL {
-  private final val table: String = "crypto_currencies"
 
   def select(symbol: CryptoCurrency.Symbol): Query0[CryptoCurrency] = sql"""
           SELECT symbol, name, slug
-          FROM $table
+          FROM crypto_currencies
           WHERE symbol = ${symbol.value}
       """.query[CryptoCurrency]
 }
