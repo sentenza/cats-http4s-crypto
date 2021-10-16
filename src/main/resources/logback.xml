@@ -1,0 +1,54 @@
+<configuration>
+
+    <!--  STDOUT   -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} TKD [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ASYNCSTDOUT" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="STDOUT" />
+    </appender>
+
+    <!--  FILE  -->
+    <appender name="FILE-ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${application.home:-.}/logs/application.log</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/archived/app.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+            <!-- each archived file, size max 10MB -->
+            <maxFileSize>10MB</maxFileSize>
+            <!-- total size of all archive files, if total size > 20GB, it will delete old archived file -->
+            <totalSizeCap>100MB</totalSizeCap>
+            <!-- 60 days to keep -->
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d %p %c{1.} [%t] %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${application.home:-.}/logs/application.log</file>
+        <encoder>
+            <pattern>%date [%level] from %logger in %thread - %message%n%xException</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ASYNCFILE" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="FILE" />
+    </appender>
+
+
+    <!-- <logger name="org.apache.http.client.protocol" level="ERROR" /> -->
+
+    <!--change to DEBUG for a lot of logging :D-->
+    <root level="INFO">
+        <appender-ref ref="FILE-ROLLING" />
+        <appender-ref ref="ASYNCSTDOUT" />
+    </root>
+
+</configuration>

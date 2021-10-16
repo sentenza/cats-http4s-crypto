@@ -1,6 +1,7 @@
 package com.github.sentenza.catsh4s.infrastructure
 
-import com.github.sentenza.catsh4s.domain.{CryptoCurrency, Pong}
+import com.github.sentenza.catsh4s.domain.crypto.CryptoCurrency
+import com.github.sentenza.catsh4s.domain.generic.Pong
 import io.circe.generic.semiauto.deriveDecoder
 import io.circe.{Decoder, Encoder, Json}
 import org.http4s.EntityEncoder

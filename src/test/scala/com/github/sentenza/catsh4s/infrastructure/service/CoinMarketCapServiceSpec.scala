@@ -1,4 +1,4 @@
-package com.github.sentenza.catsh4s.service
+package com.github.sentenza.catsh4s.infrastructure.service
 
 import cats.effect.{IO, Resource}
 import com.github.sentenza.catsh4s.config.CmcConfig
