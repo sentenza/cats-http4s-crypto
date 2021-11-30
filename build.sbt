@@ -5,7 +5,7 @@ val EnumeratumVersion = "1.7.0"
 val LogbackVersion    = "1.2.7"
 val ScalaTestVersion  = "3.2.10"
 val FlexmarkVersion   = "0.62.2"
-val FlywayVersion     = "8.0.3"
+val FlywayVersion     = "8.0.5"
 val DoobieVersion     = "1.0.0-RC1"
 
 lazy val root = (project in file("."))
