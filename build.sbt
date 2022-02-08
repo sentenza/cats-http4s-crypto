@@ -4,7 +4,7 @@ val CirceVersion      = "0.14.1"
 val EnumeratumVersion = "1.7.0"
 val LogbackVersion    = "1.2.10"
 val ScalaTestVersion  = "3.2.10"
-val FlexmarkVersion   = "0.62.2"
+val FlexmarkVersion   = "0.64.0"
 val FlywayVersion     = "8.4.4"
 val DoobieVersion     = "1.0.0-RC2"
 
