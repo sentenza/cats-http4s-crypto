@@ -13,5 +13,5 @@ addSbtPlugin("net.vonbuchholtz" % "sbt-dependency-check" % "3.4.0")
 // To enable test coverage analysis
 addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.9.3")
 
-addSbtPlugin("com.eed3si9n"     % "sbt-assembly" % "1.1.0")
+addSbtPlugin("com.eed3si9n"     % "sbt-assembly" % "1.1.1")
 addSbtPlugin("com.timushev.sbt" % "sbt-updates"  % "0.6.2")
