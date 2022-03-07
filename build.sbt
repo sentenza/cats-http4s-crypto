@@ -2,10 +2,10 @@ val PureConfigVersion = "0.17.1"
 val Http4sVersion     = "0.23.10"
 val CirceVersion      = "0.14.1"
 val EnumeratumVersion = "1.7.0"
-val LogbackVersion    = "1.2.10"
+val LogbackVersion    = "1.2.11"
 val ScalaTestVersion  = "3.2.10"
 val FlexmarkVersion   = "0.64.0"
-val FlywayVersion     = "8.4.4"
+val FlywayVersion     = "8.5.1"
 val DoobieVersion     = "1.0.0-RC2"
 
 lazy val root = (project in file("."))
