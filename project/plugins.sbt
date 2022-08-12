@@ -1,5 +1,5 @@
 // Easily manage scalac settings across scala versions with this
-addSbtPlugin("io.github.davidgregory084" % "sbt-tpolecat" % "0.3.1")
+addSbtPlugin("io.github.davidgregory084" % "sbt-tpolecat" % "0.3.3")
 
 // Makes our code tidy
 addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.4.6")
@@ -11,7 +11,7 @@ addSbtPlugin("io.spray" % "sbt-revolver" % "0.9.1")
 addSbtPlugin("net.vonbuchholtz" % "sbt-dependency-check" % "4.1.0")
 
 // To enable test coverage analysis
-addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.9.3")
+addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.0.2")
 
 addSbtPlugin("com.eed3si9n"     % "sbt-assembly" % "1.2.0")
-addSbtPlugin("com.timushev.sbt" % "sbt-updates"  % "0.6.2")
+addSbtPlugin("com.timushev.sbt" % "sbt-updates"  % "0.6.3")
