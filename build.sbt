@@ -40,7 +40,7 @@ lazy val root = (project in file("."))
       "org.scalatest"       %% "scalatest"                     % ScalaTestVersion          % Test,
       "org.scalatestplus"   %% "mockito-3-4"                   % (ScalaTestVersion + ".0") % Test,
       "com.vladsch.flexmark" % "flexmark-all"                  % FlexmarkVersion           % Test,
-      "org.typelevel"       %% "cats-effect-testing-scalatest" % "1.4.0"                   % Test,
+      "org.typelevel"       %% "cats-effect-testing-scalatest" % "1.5.0"                   % Test,
       "ch.qos.logback"       % "logback-classic"               % LogbackVersion,
       "org.scalameta"       %% "svm-subs"                      % "20.2.0"
     ),
