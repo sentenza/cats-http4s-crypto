@@ -1,8 +1,8 @@
-val PureConfigVersion = "0.17.1"
+val PureConfigVersion = "0.17.2"
 val Http4sVersion     = "0.23.11"
 val CirceVersion      = "0.14.2"
 val EnumeratumVersion = "1.7.0"
-val LogbackVersion    = "1.2.11"
+val LogbackVersion    = "1.2.12"
 val ScalaTestVersion  = "3.2.10"
 val FlexmarkVersion   = "0.64.0"
 val FlywayVersion     = "8.5.13"
@@ -13,7 +13,7 @@ lazy val root = (project in file("."))
     organization := "com.github.sentenza",
     name         := "cats-h4s",
     version      := "0.0.1-SNAPSHOT",
-    scalaVersion := "2.13.8",
+    scalaVersion := "2.13.10",
     libraryDependencies ++= Seq(
       // http4s
       "org.http4s" %% "http4s-ember-server" % Http4sVersion,
@@ -40,7 +40,7 @@ lazy val root = (project in file("."))
       "org.scalatest"       %% "scalatest"                     % ScalaTestVersion          % Test,
       "org.scalatestplus"   %% "mockito-3-4"                   % (ScalaTestVersion + ".0") % Test,
       "com.vladsch.flexmark" % "flexmark-all"                  % FlexmarkVersion           % Test,
-      "org.typelevel"       %% "cats-effect-testing-scalatest" % "1.4.0"                   % Test,
+      "org.typelevel"       %% "cats-effect-testing-scalatest" % "1.5.0"                   % Test,
       "ch.qos.logback"       % "logback-classic"               % LogbackVersion,
       "org.scalameta"       %% "svm-subs"                      % "20.2.0"
     ),
