@@ -13,7 +13,7 @@ lazy val root = (project in file("."))
     organization := "com.github.sentenza",
     name         := "cats-h4s",
     version      := "0.0.1-SNAPSHOT",
-    scalaVersion := "2.13.10",
+    scalaVersion := "2.13.11",
     libraryDependencies ++= Seq(
       // http4s
       "org.http4s" %% "http4s-ember-server" % Http4sVersion,
