@@ -6,7 +6,7 @@ val LogbackVersion    = "1.2.12"
 val ScalaTestVersion  = "3.2.10"
 val FlexmarkVersion   = "0.64.0"
 val FlywayVersion     = "8.5.13"
-val DoobieVersion     = "1.0.0-RC2"
+val DoobieVersion     = "1.0.0-RC4"
 
 lazy val root = (project in file("."))
   .settings(
