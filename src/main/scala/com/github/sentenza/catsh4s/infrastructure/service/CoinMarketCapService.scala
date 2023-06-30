@@ -36,8 +36,8 @@ object CoinMarketCapService {
       val authHeader: Headers = Headers("X-CMC_PRO_API_KEY" -> cmcConfig.apikey)
 
       /** @example
-        *   curl -H "X-CMC_PRO_API_KEY: b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c" -H "Accept: application/json" \
-        * -d "symbol=btc" -G "https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest"
+        *   curl -H "X-CMC_PRO_API_KEY: b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c" -H "Accept: application/json" \ -d
+        *   "symbol=btc" -G "https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest"
         */
       def getLatestQuote(symbol: CryptoCurrency.Symbol): F[String] = {
         val cmcEndpoint = basePath
