@@ -1,14 +1,15 @@
 package com.github.sentenza.catsh4s.domain.crypto
 
-/** Represents a Cryptocurrency
-  *
-  * @param symbol
-  *   e.g. "BTC"
-  * @param name
-  *   e.g. "Bitcoin"
-  * @param slug
-  *   e.g. "bitcoin"
-  */
+/**
+ * Represents a Cryptocurrency
+ *
+ * @param symbol
+ *   e.g. "BTC"
+ * @param name
+ *   e.g. "Bitcoin"
+ * @param slug
+ *   e.g. "bitcoin"
+ */
 case class CryptoCurrency(symbol: CryptoCurrency.Symbol, name: CryptoCurrency.Name, slug: CryptoCurrency.Slug)
 
 object CryptoCurrency {

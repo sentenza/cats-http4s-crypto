@@ -1,11 +1,12 @@
 package com.github.sentenza.catsh4s.infrastructure.service
 
-import cats.effect.{IO, Resource}
+import cats.effect.IO
+import cats.effect.Resource
 import com.github.sentenza.catsh4s.config.CmcConfig
 import com.github.sentenza.catsh4s.infrastructure.service.CoinMarketCapService
 import fs2.Stream
-import org.http4s.Response
 import org.http4s.client.Client
+import org.http4s.Response
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec
 

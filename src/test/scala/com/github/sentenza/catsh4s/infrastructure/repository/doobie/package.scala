@@ -1,10 +1,10 @@
 package com.github.sentenza.catsh4s.infrastructure.repository
 
+import scala.concurrent.ExecutionContext
+
 import _root_.doobie.Transactor
 import cats.effect.Async
 import com.github.sentenza.catsh4s.config.DatabaseConfig
-
-import scala.concurrent.ExecutionContext
 
 package object doobie {
 
@@ -12,9 +12,10 @@ package object doobie {
 
   def getTransactor[F[_]: Async](cfg: DatabaseConfig): Transactor[F] =
     Transactor.fromDriverManager[F](
-      cfg.driver,  // driver classname
-      cfg.url,     // connect URL (driver-specific)
-      cfg.user,    // user
-      cfg.password // password
+      driver = cfg.driver,     // driver classname
+      url = cfg.url,           // connect URL (driver-specific)
+      user = cfg.user,         // user
+      password = cfg.password, // password
+      logHandler = None
     )
 }

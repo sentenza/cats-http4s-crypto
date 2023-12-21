@@ -1,20 +1,25 @@
 package com.github.sentenza.catsh4s.infrastructure
 
-import cats.effect.{Async, Resource}
+import cats.effect.Async
+import cats.effect.Resource
 import com.comcast.ip4s._
 import com.github.sentenza.catsh4s.config.AppConfig
 import com.github.sentenza.catsh4s.db.Database
-import com.github.sentenza.catsh4s.infrastructure.routes.{CoinMarketCapRoutes, HealthRoutes, MainApiRoutes}
-import com.github.sentenza.catsh4s.infrastructure.service.{CoinMarketCapService, PingService}
+import com.github.sentenza.catsh4s.infrastructure.routes.CoinMarketCapRoutes
+import com.github.sentenza.catsh4s.infrastructure.routes.HealthRoutes
+import com.github.sentenza.catsh4s.infrastructure.routes.MainApiRoutes
+import com.github.sentenza.catsh4s.infrastructure.service.CoinMarketCapService
+import com.github.sentenza.catsh4s.infrastructure.service.PingService
 import doobie.ExecutionContexts
-import org.http4s.HttpApp
+import fs2.io.net.Network
 import org.http4s.ember.client.EmberClientBuilder
 import org.http4s.ember.server.EmberServerBuilder
 import org.http4s.server.middleware.Logger
+import org.http4s.HttpApp
 
 object Server {
 
-  def run[F[_]: Async]: F[Nothing] = {
+  def run[F[_]: Async: Network]: F[Nothing] = {
     import cats.syntax.semigroupk._ // to be able to combine routes
     (for {
       client        <- EmberClientBuilder.default[F].build

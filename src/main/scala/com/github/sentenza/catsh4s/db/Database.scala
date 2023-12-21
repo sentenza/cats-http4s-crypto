@@ -1,12 +1,14 @@
 package com.github.sentenza.catsh4s.db
 
-import cats.effect.{Async, Resource, Sync}
+import scala.concurrent.ExecutionContext
+
+import cats.effect.Async
+import cats.effect.Resource
+import cats.effect.Sync
 import cats.implicits.toFunctorOps
 import com.github.sentenza.catsh4s.config.DatabaseConfig
 import doobie.hikari.HikariTransactor
 import org.flywaydb.core.Flyway
-
-import scala.concurrent.ExecutionContext
 
 object Database {
   def transactor[F[_]: Async](
@@ -28,8 +30,9 @@ object Database {
       S.delay(fw.migrate()).as(())
     }
 
-  /** Runs the flyway migrations against the target database
-    */
+  /**
+   * Runs the flyway migrations against the target database
+   */
   def initializeDb[F[_]](cfg: DatabaseConfig)(implicit S: Sync[F]): F[Unit] =
     S.delay {
       val fw: Flyway =

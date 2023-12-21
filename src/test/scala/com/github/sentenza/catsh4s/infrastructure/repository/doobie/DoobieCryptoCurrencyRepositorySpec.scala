@@ -1,10 +1,11 @@
 package com.github.sentenza.catsh4s.infrastructure.repository.doobie
 
-import cats.effect.IO
 import cats.effect.unsafe.implicits.global
+import cats.effect.IO
 import com.github.sentenza.catsh4s.domain.crypto.CryptoCurrency
 import org.scalatest.matchers.should.Matchers
-import org.scalatest.{OptionValues, wordspec}
+import org.scalatest.wordspec
+import org.scalatest.OptionValues
 
 class DoobieCryptoCurrencyRepositorySpec
     extends wordspec.AnyWordSpec

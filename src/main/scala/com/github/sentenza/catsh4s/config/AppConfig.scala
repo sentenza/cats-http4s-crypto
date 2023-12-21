@@ -1,9 +1,10 @@
 package com.github.sentenza.catsh4s.config
 
-import cats.effect.{Async, Resource}
-import pureconfig.ConfigSource
+import cats.effect.Async
+import cats.effect.Resource
 import pureconfig.generic.auto._
 import pureconfig.module.catseffect.syntax._
+import pureconfig.ConfigSource
 
 case class ServerConfig(host: String, port: Int)
 case class CmcConfig(baseUrl: String, apikey: String)

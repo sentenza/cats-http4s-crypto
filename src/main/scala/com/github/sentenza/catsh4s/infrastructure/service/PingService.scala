@@ -1,7 +1,7 @@
 package com.github.sentenza.catsh4s.infrastructure.service
 
-import cats.Applicative
 import cats.implicits._
+import cats.Applicative
 import com.github.sentenza.catsh4s.domain.generic.Pong
 
 trait PingService[F[_]] {

@@ -1,7 +1,8 @@
 package com.github.sentenza.catsh4s.infrastructure.repository.doobie
 
 import cats.effect.Async
-import com.github.sentenza.catsh4s.domain.crypto.{CryptoCurrency, CryptoCurrencyRepositoryAlgebra}
+import com.github.sentenza.catsh4s.domain.crypto.CryptoCurrency
+import com.github.sentenza.catsh4s.domain.crypto.CryptoCurrencyRepositoryAlgebra
 import doobie.implicits._
 import doobie.util.query.Query0
 import doobie.util.transactor.Transactor
