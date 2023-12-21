@@ -1,15 +1,18 @@
 package com.github.sentenza.catsh4s.infrastructure.routes
 
-import cats.effect.IO
 import cats.effect.unsafe.implicits.global
+import cats.effect.IO
 import com.github.sentenza.catsh4s.infrastructure.routes.MainApiRoutes
 import com.github.sentenza.catsh4s.infrastructure.service.PingService
-import io.circe.Decoder
 import io.circe.generic.semiauto.deriveDecoder
-import org.http4s.Status.Ok
+import io.circe.Decoder
 import org.http4s.circe.jsonOf
 import org.http4s.implicits._
-import org.http4s.{EntityDecoder, Method, Request, Response}
+import org.http4s.EntityDecoder
+import org.http4s.Method
+import org.http4s.Request
+import org.http4s.Response
+import org.http4s.Status.Ok
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec
 
