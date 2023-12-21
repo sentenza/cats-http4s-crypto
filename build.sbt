@@ -1,19 +1,19 @@
-val PureConfigVersion = "0.17.2"
-val Http4sVersion     = "0.23.11"
-val CirceVersion      = "0.14.2"
-val EnumeratumVersion = "1.7.0"
-val LogbackVersion    = "1.2.12"
-val ScalaTestVersion  = "3.2.10"
-val FlexmarkVersion   = "0.64.0"
-val FlywayVersion     = "8.5.13"
-val DoobieVersion     = "1.0.0-RC2"
+val PureConfigVersion = "0.17.4"
+val Http4sVersion     = "0.23.24"
+val CirceVersion      = "0.14.6"
+val EnumeratumVersion = "1.7.3"
+val LogbackVersion    = "1.4.14"
+val ScalaTestVersion  = "3.2.17"
+val FlexmarkVersion   = "0.64.8"
+val FlywayVersion     = "10.4.0"
+val DoobieVersion     = "1.0.0-RC5"
 
 lazy val root = (project in file("."))
   .settings(
     organization := "com.github.sentenza",
     name         := "cats-h4s",
     version      := "0.0.1-SNAPSHOT",
-    scalaVersion := "2.13.10",
+    scalaVersion := "2.13.12",
     libraryDependencies ++= Seq(
       // http4s
       "org.http4s" %% "http4s-ember-server" % Http4sVersion,
@@ -37,10 +37,10 @@ lazy val root = (project in file("."))
       "com.beachape" %% "enumeratum"       % EnumeratumVersion,
       "com.beachape" %% "enumeratum-circe" % EnumeratumVersion,
       // scalatest
-      "org.scalatest"       %% "scalatest"                     % ScalaTestVersion          % Test,
-      "org.scalatestplus"   %% "mockito-3-4"                   % (ScalaTestVersion + ".0") % Test,
-      "com.vladsch.flexmark" % "flexmark-all"                  % FlexmarkVersion           % Test,
-      "org.typelevel"       %% "cats-effect-testing-scalatest" % "1.5.0"                   % Test,
+      "org.scalatest"       %% "scalatest"                     % ScalaTestVersion % Test,
+      "org.scalatestplus"   %% "mockito-3-4"                   % "3.2.10.0"       % Test,
+      "com.vladsch.flexmark" % "flexmark-all"                  % FlexmarkVersion  % Test,
+      "org.typelevel"       %% "cats-effect-testing-scalatest" % "1.5.0"          % Test,
       "ch.qos.logback"       % "logback-classic"               % LogbackVersion,
       "org.scalameta"       %% "svm-subs"                      % "20.2.0"
     ),

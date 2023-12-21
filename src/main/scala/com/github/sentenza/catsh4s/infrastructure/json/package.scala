@@ -3,9 +3,11 @@ package com.github.sentenza.catsh4s.infrastructure
 import com.github.sentenza.catsh4s.domain.crypto.CryptoCurrency
 import com.github.sentenza.catsh4s.domain.generic.Pong
 import io.circe.generic.semiauto.deriveDecoder
-import io.circe.{Decoder, Encoder, Json}
-import org.http4s.EntityEncoder
+import io.circe.Decoder
+import io.circe.Encoder
+import io.circe.Json
 import org.http4s.circe.jsonEncoderOf
+import org.http4s.EntityEncoder
 
 package object json {
   // Cryptocurrency

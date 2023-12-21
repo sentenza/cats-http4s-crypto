@@ -1,10 +1,12 @@
 package com.github.sentenza.catsh4s.infrastructure.routes
 
-import cats.effect.IO
 import cats.effect.unsafe.implicits.global
-import org.http4s.Status.Ok
+import cats.effect.IO
 import org.http4s.implicits._
-import org.http4s.{Method, Request, Response}
+import org.http4s.Method
+import org.http4s.Request
+import org.http4s.Response
+import org.http4s.Status.Ok
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec
 
