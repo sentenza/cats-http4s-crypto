@@ -2,7 +2,7 @@
 addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.5.2")
 
 // Revolver allows us to use re-start and work a lot faster!
-addSbtPlugin("io.spray" % "sbt-revolver" % "0.9.1")
+addSbtPlugin("io.spray" % "sbt-revolver" % "0.10.0")
 
 // To enable test coverage analysis
 addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.0.9")
