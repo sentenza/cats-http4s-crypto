@@ -44,7 +44,7 @@ lazy val root = (project in file("."))
       "ch.qos.logback"       % "logback-classic"               % LogbackVersion,
       "org.scalameta"       %% "svm-subs"                      % "20.2.0"
     ),
-    addCompilerPlugin("org.typelevel" %% "kind-projector"     % "0.13.2" cross CrossVersion.full),
+    addCompilerPlugin("org.typelevel" %% "kind-projector"     % "0.13.3" cross CrossVersion.full),
     addCompilerPlugin("com.olegpy"    %% "better-monadic-for" % "0.3.1")
   )
 
