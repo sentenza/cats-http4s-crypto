@@ -24,7 +24,7 @@ class MainApiRoutesSpec extends wordspec.AnyWordSpec with Matchers {
     implicit val pongDecoder: Decoder[PongResponse]                 = deriveDecoder[PongResponse]
     implicit def pongEntityDecoder: EntityDecoder[IO, PongResponse] = jsonOf[IO, PongResponse]
     // Services and Routes materializer
-    val pingService: PingService[IO] = PingService.impl[IO]
+    val pingService: PingService[IO]                      = PingService.impl[IO]
     def callRoute(request: Request[IO]): IO[Response[IO]] =
       MainApiRoutes.essentialRoutes[IO](pingService).orNotFound(request)
   }
